@@ -1,21 +1,21 @@
-# 🎨 OrionTek Frontend - Next.js
+# OrionTek Frontend - Next.js
 
 > **Frontend del Sistema de Gestión de Clientes**  
 > **Desarrollado en 48 horas para evaluación técnica**  
 > **Stack: Next.js 14 + React + TypeScript + Tailwind CSS**
 
-## 🎯 ¿Qué es esto?
+## ¿Qué es esto?
 
 Este es el frontend de OrionTek, la interfaz de usuario que desarrollé para el sistema de gestión de clientes. Quería demostrar que puedo crear interfaces modernas, responsive y con buena UX usando las últimas tecnologías.
 
-### 💡 ¿Por qué Next.js 14?
+### ¿Por qué Next.js 14?
 
 - **App Router**: Me gusta la nueva arquitectura de Next.js, es más intuitiva
 - **React 19**: Para usar las últimas características de React
 - **TypeScript**: Para evitar errores y tener mejor DX
 - **Tailwind CSS**: Para desarrollo rápido y consistente
 
-## 🚀 Características Implementadas
+## Características Implementadas
 
 - ✅ **Next.js 14 con App Router** - Arquitectura moderna y eficiente
 - ✅ **React 19** - Con hooks y componentes funcionales
@@ -26,7 +26,7 @@ Este es el frontend de OrionTek, la interfaz de usuario que desarrollé para el 
 - ✅ **Integración con API** - Comunicación con backend Express
 - ✅ **Responsive design** - Funciona en todos los dispositivos
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 - **Framework**: Next.js 14
 - **Lenguaje**: TypeScript
@@ -37,7 +37,7 @@ Este es el frontend de OrionTek, la interfaz de usuario que desarrollé para el 
 - **Iconos**: Lucide React
 - **Utilidades**: clsx, date-fns, tailwind-merge
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Dependencias
 ```bash
@@ -60,7 +60,7 @@ npm run build
 npm start
 ```
 
-## 🏗️ Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -85,51 +85,51 @@ src/
     └── index.ts           # Definiciones de tipos
 ```
 
-## 📱 Páginas Disponibles
+## Páginas Disponibles
 
-### 🏠 Página Principal (`/`)
+### Página Principal (`/`)
 - Dashboard con estadísticas del sistema
 - Acciones rápidas para operaciones comunes
 - Características principales destacadas
 - Diseño hero con call-to-action
 
-### 👥 Clientes (`/clients`)
+### Clientes (`/clients`)
 - Lista paginada de todos los clientes
 - Búsqueda y filtrado en tiempo real
 - Acciones CRUD para cada cliente
 - Diseño de tarjetas responsive
 
-### ➕ Nuevo Cliente (`/clients/new`)
+### Nuevo Cliente (`/clients/new`)
 - Formulario de creación con validación
 - Campos requeridos y opcionales
 - Redirección automática tras creación
 - Manejo de errores en tiempo real
 
-### ✏️ Editar Cliente (`/clients/[id]/edit`)
+### Editar Cliente (`/clients/[id]/edit`)
 - Formulario pre-poblado con datos existentes
 - Validación de campos
 - Actualización en tiempo real
 - Confirmación de cambios
 
-### 👤 Detalle de Cliente (`/clients/[id]`)
+### Detalle de Cliente (`/clients/[id]`)
 - Información completa del cliente
 - Lista de direcciones asociadas
 - Acciones de gestión (editar, eliminar)
 - Navegación a direcciones
 
-### 🏠 Direcciones (`/clients/[id]/addresses`)
+### Direcciones (`/clients/[id]/addresses`)
 - Gestión de direcciones por cliente
 - Crear, editar y eliminar direcciones
 - Marcar dirección como principal
 - Validación de campos de dirección
 
-### 🔍 Búsqueda (`/search`)
+### Búsqueda (`/search`)
 - Búsqueda global en clientes y direcciones
 - Filtros avanzados
 - Resultados en tiempo real
 - Historial de búsquedas
 
-## 🎨 Componentes
+## Componentes
 
 ### Layout Principal
 - Header con navegación principal
@@ -155,7 +155,7 @@ src/
 - Navegación móvil optimizada
 - Indicadores de página activa
 
-## 🔌 Servicios de API
+## Servicios de API
 
 ### ClientService
 ```typescript
@@ -179,7 +179,7 @@ deleteAddress(id: string): Promise<void>
 setPrimaryAddress(id: string): Promise<void>
 ```
 
-## 🎯 Decisiones de Diseño
+## Decisiones de Diseño
 
 ### ¿Por qué App Router?
 - **Rutas anidadas**: Más intuitivo para organizar páginas
@@ -199,7 +199,7 @@ setPrimaryAddress(id: string): Promise<void>
 - **Accesibilidad**: Manejo automático de labels
 - **TypeScript**: Tipado completo
 
-## 🔧 Configuración
+## Configuración
 
 ### Variables de Entorno
 ```env
@@ -237,7 +237,7 @@ module.exports = {
 }
 ```
 
-## 🚀 Despliegue
+## Despliegue
 
 ### Desarrollo Local
 ```bash
@@ -257,14 +257,14 @@ npm run build
 # Desplegar en Vercel
 ```
 
-## 🔒 Seguridad y Validación
+## Seguridad y Validación
 
 - **Validación de entrada**: Zod schemas para todos los formularios
 - **Sanitización**: Limpieza de datos antes de enviar
 - **CORS**: Configurado en backend
 - **TypeScript**: Prevención de errores en runtime
 
-## 📊 Performance
+## Performance
 
 - **Lazy loading**: Componentes cargados bajo demanda
 - **Image optimization**: Next.js Image component
@@ -272,7 +272,7 @@ npm run build
 - **SSR/SSG**: Cuando sea posible
 - **Code splitting**: Por rutas automático
 
-## 🧪 Testing y Calidad
+## Testing y Calidad
 
 ```bash
 # Linting
@@ -291,14 +291,14 @@ En un proyecto real implementaría:
 - **Storybook**: Para documentar componentes
 - **Coverage**: Mínimo 80%
 
-## 🐛 Problemas que Enfrenté
+## Problemas que Enfrenté
 
 1. **Integración con API**: Tuve que configurar CORS y manejar errores de red
 2. **Formularios complejos**: Implementar validación en tiempo real con React Hook Form
 3. **Responsive design**: Asegurar que funcione bien en móviles
 4. **Estado de la aplicación**: Manejar loading, errores y éxito en formularios
 
-## 📈 Próximos Pasos (si fuera producción)
+## Próximos Pasos (si fuera producción)
 
 - [ ] **Testing completo** con Jest y Cypress
 - [ ] **Storybook** para documentar componentes
@@ -309,7 +309,7 @@ En un proyecto real implementaría:
 - [ ] **Performance monitoring** con Core Web Vitals
 - [ ] **SEO optimization** con meta tags dinámicos
 
-## 🤝 Contribución
+## Contribución
 
 Si quieres contribuir:
 1. Fork el proyecto
@@ -318,11 +318,11 @@ Si quieres contribuir:
 4. Push a la rama
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
 
 MIT License - Haz lo que quieras con el código.
 
-## 👨‍💻 Sobre mí
+## Sobre mí
 
 Soy un desarrollador frontend que le gusta crear interfaces intuitivas y funcionales. Este proyecto demuestra mis habilidades en:
 
@@ -337,8 +337,8 @@ Soy un desarrollador frontend que le gusta crear interfaces intuitivas y funcion
 
 > **Nota**: Este proyecto fue desarrollado en 48 horas para una evaluación técnica. Aunque es funcional, en un entorno de producción implementaría más testing, optimizaciones y features.
 
-## 📞 Contacto
+## Contacto
 
-- **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
-- **LinkedIn**: [Tu Nombre](https://linkedin.com/in/tu-usuario)
-- **Email**: tu-email@ejemplo.com
+- **GitHub**: [@JASBOOTSTUDIOS](https://github.com/JASBOOTSTUDIOS)
+- **LinkedIn**: [Jefry Astacio](https://linkedin.com/in/jefry-astacio)
+- **Email**: jefry.astacio@ejemplo.com

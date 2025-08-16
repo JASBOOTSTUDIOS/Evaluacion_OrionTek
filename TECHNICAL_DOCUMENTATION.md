@@ -1,14 +1,14 @@
-#  Documentación Técnica - OrionTek
+# Documentación Técnica - OrionTek
 
 > **Evaluación Técnica - Full Stack Developer**  
 > **Tiempo de Desarrollo: 48 horas**  
 > **Fecha: Enero 2025**
 
-##  Resumen Ejecutivo
+## Resumen Ejecutivo
 
 OrionTek es un sistema de gestión de clientes desarrollado como parte de una evaluación técnica para demostrar competencias en desarrollo full-stack. El proyecto implementa una arquitectura moderna con separación clara de responsabilidades, utilizando las mejores prácticas de la industria.
 
-##  Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ### Diagrama de Arquitectura
 ```
@@ -46,7 +46,7 @@ OrionTek es un sistema de gestión de clientes desarrollado como parte de una ev
 - **Características**: UUIDs, Triggers, Índices optimizados
 - **Esquema**: Normalizado con relaciones bien definidas
 
-##  Patrón CQRS Implementado
+## Patrón CQRS Implementado
 
 ### Commands (Comandos)
 ```typescript
@@ -91,7 +91,7 @@ async getClients(req: Request, res: Response) {
 3. **Mantenibilidad**: Código más organizado y fácil de entender
 4. **Testing**: Pruebas unitarias más específicas
 
-##  Diseño de Base de Datos
+## Diseño de Base de Datos
 
 ### Esquema Normalizado
 ```sql
@@ -161,7 +161,7 @@ CREATE TRIGGER update_clients_updated_at
 - **Consistencia**: Siempre actualizados
 - **Triggers**: Automatización completa
 
-##  API REST Design
+## API REST Design
 
 ### Principios REST Implementados
 
@@ -225,7 +225,7 @@ export const errorHandler = (err: Error, req: Request, res: Response, next: Next
 };
 ```
 
-##  Frontend Architecture
+## Frontend Architecture
 
 ### App Router Structure
 ```
@@ -341,7 +341,7 @@ export function useClients() {
 }
 ```
 
-##  Seguridad y Validación
+## Seguridad y Validación
 
 ### Middleware de Seguridad
 
@@ -428,7 +428,7 @@ export const addressSchema = z.object({
 });
 ```
 
-##  Testing Strategy
+## Testing Strategy
 
 ### Backend Testing
 
@@ -542,7 +542,7 @@ describe('ClientForm', () => {
 });
 ```
 
-##  Performance y Optimización
+## Performance y Optimización
 
 ### Backend Optimizaciones
 
@@ -603,7 +603,7 @@ const MemoizedClientCard = memo(ClientCard, (prevProps, nextProps) => {
 });
 ```
 
-##  Despliegue y CI/CD
+## Despliegue y CI/CD
 
 ### Environment Configuration
 
@@ -703,7 +703,7 @@ volumes:
   postgres_data:
 ```
 
-##  Monitoreo y Logging
+## Monitoreo y Logging
 
 ### Health Checks
 ```typescript
@@ -756,7 +756,7 @@ const logger = winston.createLogger({
 });
 ```
 
-##  Próximos Pasos y Mejoras
+## Próximos Pasos y Mejoras
 
 ### Backend Mejoras
 - [ ] **Autenticación JWT** con refresh tokens
@@ -784,7 +784,7 @@ const logger = winston.createLogger({
 - [ ] **Monitoring** con ELK stack
 - [ ] **Backup automático** de base de datos
 
-##  Conclusiones
+## Conclusiones
 
 ### Logros Alcanzados
 1. **Arquitectura sólida**: Implementación exitosa de CQRS
@@ -809,4 +809,14 @@ const logger = winston.createLogger({
 
 ---
 
-> **Nota**: Este documento técnico fue creado para documentar las decisiones de arquitectura y implementación del proyecto OrionTek. Sirve como referencia para desarrolladores que trabajen en el proyecto y como evidencia de las competencias técnicas demostradas en la evaluación.
+> **Nota**: Este documento técnico fue creado para documentar las decisiones de arquitectura e implementación del proyecto OrionTek. Sirve como referencia para desarrolladores que trabajen en el proyecto y como evidencia de las competencias técnicas demostradas en la evaluación.
+
+## Autor
+
+**Jefry Astacio**  
+*Full Stack Developer*  
+[GitHub](https://github.com/JASBOOTSTUDIOS) | [LinkedIn](https://linkedin.com/in/jefry-astacio)
+
+## Repositorio
+
+**URL**: https://github.com/JASBOOTSTUDIOS/Evaluacion_OrionTek.git

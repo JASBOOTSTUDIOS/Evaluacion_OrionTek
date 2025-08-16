@@ -1,32 +1,32 @@
-# 🖥️ OrionTek Backend API
+# OrionTek Backend API
 
 > **Backend del Sistema de Gestión de Clientes**  
 > **Desarrollado en 48 horas para evaluación técnica**  
 > **Stack: Node.js + Express + TypeScript + PostgreSQL**
 
-## 🎯 ¿Qué es esto?
+## ¿Qué es esto?
 
 Este es el backend de OrionTek, un sistema de gestión de clientes que desarrollé como parte de una evaluación técnica. La idea era demostrar que puedo construir APIs robustas con arquitectura limpia y buenas prácticas.
 
-### 💡 ¿Por qué esta arquitectura?
+### ¿Por qué esta arquitectura?
 
 - **CQRS**: Me gusta la separación clara entre comandos y consultas. Hace el código más mantenible
 - **TypeScript**: Para evitar errores en runtime y tener mejor DX
 - **PostgreSQL**: Porque es robusto y maneja bien los UUIDs
 - **Swagger**: Para que otros desarrolladores puedan entender la API fácilmente
 
-## 🚀 Características Implementadas
+## Características Implementadas
 
 - ✅ **API RESTful completa** - CRUD para clientes y direcciones
 - ✅ **Arquitectura CQRS** - Separación de responsabilidades
-- ✅ **Base de datos PostgreSQL** - Con triggers y índices optimizados
+- ✅ **Base de datos PostgreSQL** - Con triggers e índices optimizados
 - ✅ **Validación robusta** - Con express-validator y esquemas personalizados
 - ✅ **Manejo de errores centralizado** - Middleware que captura todo
 - ✅ **Documentación Swagger** - Interactiva y completa
 - ✅ **Seguridad básica** - Helmet + CORS configurado
 - ✅ **Testing con Jest** - Para asegurar calidad
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 - **Runtime**: Node.js 18+
 - **Framework**: Express.js
@@ -38,7 +38,7 @@ Este es el backend de OrionTek, un sistema de gestión de clientes que desarroll
 - **Testing**: Jest
 - **Seguridad**: Helmet, CORS
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Dependencias
 ```bash
@@ -70,7 +70,7 @@ npm run build
 npm start
 ```
 
-## 🗄️ Estructura de la Base de Datos
+## Estructura de la Base de Datos
 
 ### Tabla `clients`
 ```sql
@@ -97,13 +97,13 @@ created_at TIMESTAMP         -- Fecha creación
 updated_at TIMESTAMP         -- Fecha actualización
 ```
 
-### 🔍 Índices y Optimizaciones
+### Índices y Optimizaciones
 - Índice en `clients.email` para búsquedas rápidas
 - Índice en `clients.name` para búsquedas por nombre
 - Índice compuesto en `addresses(client_id, is_primary)` para dirección principal
 - Trigger automático para `updated_at`
 
-## 📚 Endpoints de la API
+## Endpoints de la API
 
 ### Clientes
 | Método | Endpoint | Descripción |
@@ -131,7 +131,7 @@ updated_at TIMESTAMP         -- Fecha actualización
 | `GET` | `/health` | Health check |
 | `GET` | `/api-docs` | Documentación Swagger |
 
-## 🏗️ Arquitectura del Código
+## Arquitectura del Código
 
 ```
 src/
@@ -144,14 +144,14 @@ src/
 └── index.ts         # Punto de entrada
 ```
 
-### 🔄 Flujo de una Request
+### Flujo de una Request
 1. **Request** llega a una ruta
 2. **Middleware** de validación procesa los datos
 3. **Controller** ejecuta la lógica de negocio
 4. **Repository** interactúa con la base de datos
 5. **Response** se envía al cliente
 
-## 🔧 Configuración
+## Configuración
 
 ### Variables de Entorno
 ```env
@@ -173,7 +173,7 @@ CORS_ORIGIN=http://localhost:3000
 ### CORS
 Configuré CORS para permitir solo orígenes específicos. En desarrollo permite `localhost:3000`, en producción deberías configurar solo tu dominio.
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
@@ -185,7 +185,7 @@ Por ahora solo tengo tests básicos, pero en un proyecto real implementaría:
 - Tests de base de datos con datos de prueba
 - Coverage mínimo del 80%
 
-## 🚀 Despliegue
+## Despliegue
 
 ### Desarrollo Local
 ```bash
@@ -205,7 +205,7 @@ docker build -t oriontek-backend .
 docker run -p 3001:3001 oriontek-backend
 ```
 
-## 📊 Documentación
+## Documentación
 
 Una vez ejecutando, accede a:
 - **Swagger UI**: http://localhost:3001/api-docs
@@ -217,14 +217,14 @@ La documentación Swagger incluye:
 - Códigos de error
 - Posibilidad de probar la API directamente
 
-## 🔒 Seguridad
+## Seguridad
 
 - **Helmet**: Headers de seguridad HTTP
 - **CORS**: Orígenes permitidos configurados
 - **Validación**: Sanitización de datos de entrada
 - **UUIDs**: IDs no secuenciales para evitar enumeración
 
-## 💭 Decisiones de Diseño
+## Decisiones de Diseño
 
 ### ¿Por qué CQRS?
 Aunque es un proyecto pequeño, quise demostrar que entiendo patrones de arquitectura. CQRS separa las operaciones de lectura y escritura, lo que facilita:
@@ -245,14 +245,14 @@ Aunque es un proyecto pequeño, quise demostrar que entiendo patrones de arquite
 - Índices avanzados
 - ACID compliance
 
-## 🐛 Problemas que Enfrenté
+## Problemas que Enfrenté
 
 1. **Configuración de CORS**: Tuve que investigar cómo configurar CORS dinámicamente
 2. **Validación de UUIDs**: Creé validadores personalizados para asegurar formato correcto
 3. **Manejo de errores**: Implementé un middleware centralizado para capturar todos los errores
 4. **Triggers de BD**: Configuré triggers para actualizar automáticamente `updated_at`
 
-## 📈 Próximos Pasos (si fuera producción)
+## Próximos Pasos (si fuera producción)
 
 - [ ] **Autenticación JWT** con refresh tokens
 - [ ] **Rate limiting** para prevenir abuso
@@ -263,7 +263,7 @@ Aunque es un proyecto pequeño, quise demostrar que entiendo patrones de arquite
 - [ ] **CI/CD** con GitHub Actions
 - [ ] **Docker Compose** para desarrollo
 
-## 🤝 Contribución
+## Contribución
 
 Si quieres contribuir:
 1. Fork el proyecto
@@ -272,11 +272,11 @@ Si quieres contribuir:
 4. Push a la rama
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
 
 MIT License - Haz lo que quieras con el código.
 
-## 👨‍💻 Sobre mí
+## Sobre mí
 
 Soy un desarrollador full-stack que le gusta escribir código limpio y bien estructurado. Este proyecto es parte de mi portafolio y demuestra mis habilidades en:
 
@@ -290,8 +290,8 @@ Soy un desarrollador full-stack que le gusta escribir código limpio y bien estr
 
 > **Nota**: Este proyecto fue desarrollado en 48 horas para una evaluación técnica. Aunque es funcional, en un entorno de producción implementaría más validaciones, testing y seguridad.
 
-## 📞 Contacto
+## Contacto
 
-- **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
-- **LinkedIn**: [Tu Nombre](https://linkedin.com/in/tu-usuario)
-- **Email**: tu-email@ejemplo.com
+- **GitHub**: [@JASBOOTSTUDIOS](https://github.com/JASBOOTSTUDIOS)
+- **LinkedIn**: [Jefry Astacio](https://linkedin.com/in/jefry-astacio)
+- **Email**: jefry.astacio@ejemplo.com

@@ -1,14 +1,14 @@
-#  OrionTek - Sistema de Gestión de Clientes
+# OrionTek - Sistema de Gestión de Clientes
 
 > **Evaluación Técnica - Full Stack Developer**  
 > **Tiempo de Desarrollo: 48 horas**  
 > **Fecha de Entrega: Enero 2025**
 
-##  Descripción del Proyecto
+## Descripción del Proyecto
 
 OrionTek es un sistema completo de gestión de clientes desarrollado como parte de una evaluación técnica para el puesto de Full Stack Developer. El proyecto demuestra habilidades en desarrollo backend con Node.js/Express y frontend con Next.js, implementando arquitectura CQRS y patrones de diseño modernos.
 
-###  Objetivos Cumplidos
+### Objetivos Cumplidos
 
 - ✅ **Backend API RESTful** con Express.js y TypeScript
 - ✅ **Frontend React** con Next.js 14 y App Router
@@ -20,26 +20,26 @@ OrionTek es un sistema completo de gestión de clientes desarrollado como parte 
 - ✅ **Testing básico** con Jest
 - ✅ **Dockerización** para despliegue
 
-##  Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```
 OrionTek/
-├──   Backend (Express + TypeScript)
+├── Backend (Express + TypeScript)
 │   ├── Controllers (Lógica de negocio)
 │   ├── Repositories (Acceso a datos)
 │   ├── Middleware (Validación, CORS, Seguridad)
 │   └── Config (Base de datos, Swagger)
-├──  Frontend (Next.js + React)
+├── Frontend (Next.js + React)
 │   ├── App Router (Páginas y rutas)
 │   ├── Components (UI reutilizables)
 │   ├── Services (Llamadas a API)
 │   └── Types (Definiciones TypeScript)
-└──   Base de Datos (PostgreSQL)
+└── Base de Datos (PostgreSQL)
     ├── Tabla clients
     └── Tabla addresses
 ```
 
-##  Características Técnicas
+## Características Técnicas
 
 ### Backend
 - **Framework**: Express.js con TypeScript
@@ -58,7 +58,7 @@ OrionTek/
 - **Estado**: React Query para cache de datos
 - **UI**: Componentes reutilizables y responsive
 
-##  Instalación y Configuración
+## Instalación y Configuración
 
 ### Prerrequisitos
 - Node.js 18+
@@ -67,8 +67,8 @@ OrionTek/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/oriontek.git
-cd oriontek
+git clone https://github.com/JASBOOTSTUDIOS/Evaluacion_OrionTek.git
+cd Evaluacion_OrionTek
 ```
 
 ### 2. Configurar Backend
@@ -97,7 +97,7 @@ npm install
 npm run dev
 ```
 
-##  Variables de Entorno
+## Variables de Entorno
 
 ### Backend (.env)
 ```env
@@ -115,7 +115,7 @@ CORS_ORIGIN=http://localhost:3000
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ```
 
-##  Documentación de la API
+## Documentación de la API
 
 Una vez ejecutando el backend, accede a la documentación interactiva:
 
@@ -139,7 +139,7 @@ Una vez ejecutando el backend, accede a la documentación interactiva:
 - `PUT /api/addresses/:id` - Actualizar dirección
 - `DELETE /api/addresses/:id` - Eliminar dirección
 
-##  Testing
+## Testing
 
 ### Backend
 ```bash
@@ -153,7 +153,7 @@ cd frontend-next
 npm run lint
 ```
 
-##  Despliegue
+## Despliegue
 
 ### Desarrollo
 ```bash
@@ -175,7 +175,7 @@ npm run build
 npm start
 ```
 
-##  Estructura de la Base de Datos
+## Estructura de la Base de Datos
 
 ### Tabla `clients`
 - `id` (UUID, PK)
@@ -198,7 +198,7 @@ npm start
 - `created_at` (TIMESTAMP)
 - `updated_at` (TIMESTAMP)
 
-##  Decisiones de Diseño
+## Decisiones de Diseño
 
 ### Backend
 - **Arquitectura CQRS**: Separación clara entre operaciones de lectura y escritura
@@ -212,21 +212,21 @@ npm start
 - **Formularios Controlados**: Validación en tiempo real con React Hook Form
 - **Responsive Design**: Adaptación a todos los dispositivos
 
-##  Consideraciones de Seguridad
+## Consideraciones de Seguridad
 
 - **Helmet**: Headers de seguridad HTTP
 - **CORS**: Configuración restrictiva de orígenes
 - **Validación**: Sanitización de datos de entrada
 - **UUIDs**: Identificadores únicos no secuenciales
 
-##  Métricas de Calidad
+## Métricas de Calidad
 
 - **Cobertura de Testing**: 85%+
 - **Linting**: ESLint configurado
 - **TypeScript**: 100% tipado
 - **Performance**: Lazy loading y optimizaciones
 
-##  Próximos Pasos
+## Próximos Pasos
 
 Si fuera un proyecto en producción, consideraría:
 
@@ -239,7 +239,7 @@ Si fuera un proyecto en producción, consideraría:
 - [ ] **Migrations** para cambios de esquema
 - [ ] **Cache** con Redis para consultas frecuentes
 
-##  Notas de Desarrollo
+## Notas de Desarrollo
 
 ### Desafíos Enfrentados
 1. **Configuración de CORS**: Asegurar comunicación segura entre frontend y backend
@@ -253,13 +253,13 @@ Si fuera un proyecto en producción, consideraría:
 - Estados de UI con indicadores visuales claros
 - CSS Grid y Flexbox para layouts responsive
 
-## 👨 Autor
+## Autor
 
-**Tu Nombre**  
+**Jefry Astacio**  
 *Full Stack Developer*  
-[GitHub](https://github.com/tu-usuario) | [LinkedIn](https://linkedin.com/in/tu-usuario)
+[GitHub](https://github.com/JASBOOTSTUDIOS) | [LinkedIn](https://linkedin.com/in/jefry-astacio)
 
-##  Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
 

@@ -1,8 +1,8 @@
-# 🚀 Inicio Rápido - OrionTek
+# Inicio Rápido - OrionTek
 
 > **Guía de instalación y ejecución en 5 minutos**
 
-## ⚡ Instalación Express
+## Instalación Express
 
 ### 1. Prerrequisitos
 ```bash
@@ -15,8 +15,8 @@
 ### 2. Clonar y Configurar
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/oriontek.git
-cd oriontek
+git clone https://github.com/JASBOOTSTUDIOS/Evaluacion_OrionTek.git
+cd Evaluacion_OrionTek
 
 # Backend
 cd OrionTek_Backend
@@ -56,7 +56,7 @@ npm run dev
 - **Documentación**: http://localhost:3001/api-docs
 - **Health Check**: http://localhost:3001/health
 
-## 🔧 Configuración Rápida
+## Configuración Rápida
 
 ### Variables de Entorno Backend (.env)
 ```env
@@ -74,24 +74,24 @@ CORS_ORIGIN=http://localhost:3000
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ```
 
-## 📱 Funcionalidades Principales
+## Funcionalidades Principales
 
-### ✅ Clientes
+### Clientes
 - Crear, editar, eliminar clientes
 - Búsqueda por nombre
 - Validación de campos
 
-### ✅ Direcciones
+### Direcciones
 - Múltiples direcciones por cliente
 - Dirección principal
 - Validación de formato
 
-### ✅ API REST
+### API REST
 - Endpoints completos
 - Documentación Swagger
 - Validación de datos
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### Error de Conexión a BD
 ```bash
@@ -117,7 +117,7 @@ PORT=3002
 lsof -ti:3001 | xargs kill -9
 ```
 
-## 🧪 Testing Rápido
+## Testing Rápido
 
 ### Backend
 ```bash
@@ -132,7 +132,7 @@ npm run lint
 npm run build
 ```
 
-## 📊 Verificar Funcionamiento
+## Verificar Funcionamiento
 
 ### 1. Health Check
 ```bash
@@ -152,7 +152,7 @@ curl -X POST http://localhost:3001/api/clients \
 curl http://localhost:3001/api/clients
 ```
 
-## 🚀 Despliegue Rápido
+## Despliegue Rápido
 
 ### Docker (Opcional)
 ```bash
@@ -173,14 +173,14 @@ npm run build
 npm start
 ```
 
-## 📚 Recursos Adicionales
+## Recursos Adicionales
 
 - **README Principal**: [README.md](README.md)
 - **Documentación Técnica**: [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md)
 - **Backend**: [OrionTek_Backend/README.md](OrionTek_Backend/README.md)
 - **Frontend**: [frontend-next/README.md](frontend-next/README.md)
 
-## 🆘 Soporte
+## Soporte
 
 Si tienes problemas:
 
@@ -192,3 +192,13 @@ Si tienes problemas:
 ---
 
 > **¡Listo!** Tu sistema OrionTek debería estar funcionando en http://localhost:3000
+
+## Autor
+
+**Jefry Astacio**  
+*Full Stack Developer*  
+[GitHub](https://github.com/JASBOOTSTUDIOS) | [LinkedIn](https://linkedin.com/in/jefry-astacio)
+
+## Repositorio
+
+**URL**: https://github.com/JASBOOTSTUDIOS/Evaluacion_OrionTek.git
