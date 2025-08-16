@@ -1,75 +1,97 @@
-# Inicio Rápido - OrionTek
+# Quick Start - OrionTek
 
-> **Guía de instalación y ejecución en 5 minutos**
+> **Guía rápida de instalación y ejecución**  
+> **Para desarrolladores que quieren probar el proyecto**  
+> **Tiempo estimado: 10-15 minutos**
 
-## Instalación Express
+## Prerrequisitos
 
-### 1. Prerrequisitos
+Antes de empezar, asegúrate de tener instalado:
+
+- **Node.js** 18+ (recomiendo la LTS)
+- **PostgreSQL** 12+ (con acceso de superusuario)
+- **Git** para clonar el repositorio
+- **npm** o **yarn** como gestor de paquetes
+
+## Clonar y Configurar
+
+### 1. Clonar el repositorio
 ```bash
-# Asegúrate de tener instalado:
-# - Node.js 18+
-# - PostgreSQL 12+
-# - npm o yarn
-```
-
-### 2. Clonar y Configurar
-```bash
-# Clonar el repositorio
 git clone https://github.com/JASBOOTSTUDIOS/Evaluacion_OrionTek.git
 cd Evaluacion_OrionTek
+```
 
+### 2. Configurar variables de entorno
+```bash
 # Backend
 cd OrionTek_Backend
-npm install
 cp .env.example .env
 # Editar .env con tus credenciales de BD
 
 # Frontend
 cd ../frontend-next
-npm install
-# Crear .env.local con NEXT_PUBLIC_API_URL=http://localhost:3001/api
+# Crear .env.local con NEXT_PUBLIC_API_URL
 ```
 
-### 3. Base de Datos
-```bash
-# Crear base de datos
-createdb oriontek_db
+## Configuración de Base de Datos
 
-# Ejecutar schema
-psql -d oriontek_db -f ../OrionTek_Backend/database.sql
+### 1. Crear la base de datos
+```bash
+# Conectarse a PostgreSQL
+psql -U postgres
+
+# Crear BD
+CREATE DATABASE oriontek_db;
+\q
 ```
 
-### 4. Ejecutar
+### 2. Ejecutar el script SQL
 ```bash
-# Terminal 1 - Backend
+# Desde el directorio raíz del proyecto
+psql -U postgres -d oriontek_db -f database.sql
+```
+
+## Ejecutar el Proyecto
+
+### 1. Backend
+```bash
 cd OrionTek_Backend
+npm install
 npm run dev
-
-# Terminal 2 - Frontend
-cd frontend-next
-npm run dev
+# El backend estará en http://localhost:3001
 ```
 
-### 5. Acceder
+### 2. Frontend
+```bash
+cd frontend-next
+npm install
+npm run dev
+# El frontend estará en http://localhost:3000
+```
+
+## Acceso Rápido
+
+Una vez ejecutando ambos servicios:
+
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:3001
-- **Documentación**: http://localhost:3001/api-docs
+- **Documentación Swagger**: http://localhost:3001/api-docs
 - **Health Check**: http://localhost:3001/health
 
-## Configuración Rápida
+## Configuración Rápida de Variables
 
-### Variables de Entorno Backend (.env)
+### Backend (.env)
 ```env
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=oriontek_db
 DB_USER=postgres
-DB_PASSWORD=tu_password
+DB_PASSWORD=tu_password_aqui
 PORT=3001
 CORS_ORIGIN=http://localhost:3000
 ```
 
-### Variables de Entorno Frontend (.env.local)
+### Frontend (.env.local)
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ```
@@ -77,44 +99,47 @@ NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ## Funcionalidades Principales
 
 ### Clientes
-- Crear, editar, eliminar clientes
-- Búsqueda por nombre
-- Validación de campos
+- ✅ Crear, leer, actualizar y eliminar clientes
+- ✅ Búsqueda por nombre o email
+- ✅ Validación de datos en tiempo real
+- ✅ Interfaz responsive
 
 ### Direcciones
-- Múltiples direcciones por cliente
-- Dirección principal
-- Validación de formato
+- ✅ Gestionar múltiples direcciones por cliente
+- ✅ Marcar dirección como principal
+- ✅ Validación de campos requeridos
+- ✅ Relación cliente-dirección
 
-### API REST
-- Endpoints completos
-- Documentación Swagger
-- Validación de datos
+### Sistema
+- ✅ Dashboard con estadísticas
+- ✅ Navegación intuitiva
+- ✅ Manejo de errores
+- ✅ Loading states
 
-## Solución de Problemas
+## Troubleshooting Rápido
 
-### Error de Conexión a BD
+### Error de conexión a BD
 ```bash
-# Verificar que PostgreSQL esté ejecutándose
-sudo service postgresql status
+# Verificar que PostgreSQL esté corriendo
+sudo systemctl status postgresql
 
-# Verificar credenciales en .env
-psql -h localhost -U postgres -d oriontek_db
+# Verificar credenciales
+psql -U postgres -d oriontek_db -c "SELECT 1;"
 ```
 
 ### Error de CORS
 ```bash
 # Verificar que CORS_ORIGIN en .env coincida con la URL del frontend
-CORS_ORIGIN=http://localhost:3000
+# Debe ser exactamente: http://localhost:3000
 ```
 
-### Puerto en Uso
+### Puerto ocupado
 ```bash
-# Cambiar puerto en .env
+# Cambiar puerto en .env del backend
 PORT=3002
 
-# O matar proceso que use el puerto
-lsof -ti:3001 | xargs kill -9
+# Y actualizar .env.local del frontend
+NEXT_PUBLIC_API_URL=http://localhost:3002/api
 ```
 
 ## Testing Rápido
@@ -129,69 +154,82 @@ npm test
 ```bash
 cd frontend-next
 npm run lint
-npm run build
+npm run type-check
 ```
 
-## Verificar Funcionamiento
+## Despliegue Rápido (Docker)
 
-### 1. Health Check
+Si prefieres usar Docker:
+
 ```bash
-curl http://localhost:3001/health
-# Debe devolver: {"status":"OK","timestamp":"..."}
-```
-
-### 2. Crear Cliente
-```bash
-curl -X POST http://localhost:3001/api/clients \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Test User","email":"test@example.com"}'
-```
-
-### 3. Listar Clientes
-```bash
-curl http://localhost:3001/api/clients
-```
-
-## Despliegue Rápido
-
-### Docker (Opcional)
-```bash
-# Si tienes Docker instalado
+# Desde el directorio raíz
 docker-compose up -d
-```
 
-### Producción
-```bash
-# Backend
-cd OrionTek_Backend
-npm run build
-npm start
-
-# Frontend
-cd frontend-next
-npm run build
-npm start
+# Esto levantará:
+# - PostgreSQL en puerto 5432
+# - Backend en puerto 3001
+# - Frontend en puerto 3000
 ```
 
 ## Recursos Adicionales
 
 - **README Principal**: [README.md](README.md)
 - **Documentación Técnica**: [TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md)
-- **Backend**: [OrionTek_Backend/README.md](OrionTek_Backend/README.md)
-- **Frontend**: [frontend-next/README.md](frontend-next/README.md)
+- **Backend README**: [OrionTek_Backend/README.md](OrionTek_Backend/README.md)
+- **Frontend README**: [frontend-next/README.md](frontend-next/README.md)
 
-## Soporte
+## Comandos Útiles
 
-Si tienes problemas:
+### Desarrollo
+```bash
+# Backend en modo watch
+npm run dev
 
-1. **Verificar logs** en la consola
-2. **Revisar variables de entorno**
-3. **Verificar conexión a base de datos**
-4. **Revisar documentación técnica**
+# Frontend en modo watch
+npm run dev
+
+# Build de producción
+npm run build
+```
+
+### Base de Datos
+```bash
+# Conectarse a BD
+psql -U postgres -d oriontek_db
+
+# Ver tablas
+\dt
+
+# Ver estructura de tabla
+\d clients
+\d addresses
+```
+
+### Git
+```bash
+# Ver estado
+git status
+
+# Ver commits
+git log --oneline
+
+# Ver ramas
+git branch -a
+```
+
+## ¿Necesitas Ayuda?
+
+Si encuentras algún problema:
+
+1. **Revisa los logs** del backend y frontend
+2. **Verifica las variables** de entorno
+3. **Comprueba la conexión** a la base de datos
+4. **Revisa la documentación** técnica
+5. **Abre un issue** en GitHub
 
 ---
 
-> **¡Listo!** Tu sistema OrionTek debería estar funcionando en http://localhost:3000
+> **Nota**: Esta guía está diseñada para que puedas tener el proyecto funcionando en menos de 15 minutos. Si tienes experiencia con Node.js y PostgreSQL, debería ser aún más rápido.
 
 ## Autor
 

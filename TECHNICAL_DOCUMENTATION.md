@@ -6,7 +6,7 @@
 
 ## Resumen Ejecutivo
 
-OrionTek es un sistema de gestión de clientes desarrollado como parte de una evaluación técnica para demostrar competencias en desarrollo full-stack. El proyecto implementa una arquitectura moderna con separación clara de responsabilidades, utilizando las mejores prácticas de la industria.
+OrionTek es un sistema de gestión de clientes que desarrollé como parte de una evaluación técnica para demostrar competencias en desarrollo full-stack. El proyecto implementa una arquitectura moderna con separación clara de responsabilidades, utilizando las mejores prácticas de la industria.
 
 ## Arquitectura del Sistema
 

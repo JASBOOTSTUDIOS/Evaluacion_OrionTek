@@ -6,7 +6,7 @@
 
 ## Descripción del Proyecto
 
-OrionTek es un sistema completo de gestión de clientes desarrollado como parte de una evaluación técnica para el puesto de Full Stack Developer. El proyecto demuestra habilidades en desarrollo backend con Node.js/Express y frontend con Next.js, implementando arquitectura CQRS y patrones de diseño modernos.
+OrionTek es un sistema de gestión de clientes que desarrollé como parte de una evaluación técnica para el puesto de Full Stack Developer. El proyecto demuestra mis habilidades en desarrollo backend con Node.js/Express y frontend con Next.js, implementando arquitectura CQRS y patrones de diseño modernos.
 
 ### Objetivos Cumplidos
 
